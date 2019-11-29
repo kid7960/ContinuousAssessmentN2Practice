@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <a href="/">HOME</a>
+    <a href="/news">NEWS</a>
+    <a href="/setalarm">SET ALARM</a>
+    <a href="/alarmlist">ALARM LIST</a>
+</head>
+<meta http-equiv="refresh" content="30"/>
+<!--Refreshing the page every 30 second to keep information up-to--date-->
+<body>
+<h1>Date/Time</h1>
+<h2>{{now}}</h2>
+<h1>Notifications</h1>
+<h2>
+    {%for i in notification_list%}
+    <li>{{i}}</li>
+    {%endfor%}
+</h2>
+</body>
+</html>

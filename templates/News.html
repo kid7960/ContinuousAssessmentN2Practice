@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <a href="/">HOME</a>
+    <a href="/news">NEWS</a>
+    <a href="/setalarm">SET ALARM</a>
+    <a href="/alarmlist">ALARM LIST</a>
+</head>
+<meta http-equiv="refresh" content="7200"/>
+<!--Refreshing the page every 72000 second = 2 hours to keep information up-to--date-->
+<body>
+<h1>Weather in Exeter</h1>
+<h2>Current temperature is: {{temperature}} °C</h2>
+<h2>The wind speed is: {{wind_speed}} m/s</h2>
+<h2>Description: {{description}}</h2>
+<br>
+<h1>News</h1>
+    {%for i in top_news_title%}
+    <h2><li>{{i}}</li></h2>
+    <h3>{{top_news_content[loop.index0]}}</h3>
+    <h4>{{top_news_url[loop.index0]}}</h4>
+    {%endfor%}
+</body>
+</html>

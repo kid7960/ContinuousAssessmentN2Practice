@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <a href="/">HOME</a>
+    <a href="/news">NEWS</a>
+    <a href="/setalarm">SET ALARM</a>
+    <a href="/alarmlist">ALARM LIST</a>
+</head>
+<body>
+<h1>Set an alarm</h1>
+<form action="/setalarm" method="get">
+    <input type="datetime-local" name="alarm">
+      <input type="checkbox" name="repeat_alarm" value=True>Repeat alarm every day<br>
+    <input type="submit">
+</form>
+<h2>{{error_message}}</h2>
+<br>
+<h1>Notifications</h1>
+<h2>
+    {%for i in notification%}
+    <li>{{i}}</li>
+    {%endfor%}
+</h2>
+</body>
+</html>
